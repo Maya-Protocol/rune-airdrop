@@ -14,13 +14,18 @@ import pytz
 import time
 import json
 from os.path import exists
+import os
 from pathlib import Path
 
 
 def get_rune_balance_tc(address, height):
+    if os.stat(f'balances/{height}/{address}.json').st_size == 0:
+        return 0
+
     with open(f'balances/{height}/{address}.json') as f:
+        # Check if file is empty
+        print(address, height)
         data = json.load(f)
-        print(data)
         for coin in data['coins']:
             if coin['asset'] == 'THOR.RUNE':
                 return float(coin['amount'])/(1*10**8)
