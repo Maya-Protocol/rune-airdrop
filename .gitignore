@@ -1,0 +1,4 @@
+balances/*
+!balances/results
+pool_files/*
+!pool_files/results
