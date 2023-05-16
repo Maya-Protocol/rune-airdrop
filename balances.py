@@ -33,7 +33,7 @@ def get_rune_balance_tc(address, height):
 
 
 d1 = pd.read_csv("RUNE Owner Airdrop.csv")
-height_df = pd.read_csv("Maya_Airdrop_Height_Ref.csv")
+height_df = pd.read_csv("heights_ref.csv")
 
 for h in height_df['TC BLOCK']:
     d1['Rune_Balance_TC'] = d1.apply(

@@ -28,7 +28,7 @@ def calculate_pending_rune_maya(day, df):
     d1.to_csv(f'{file_name}.csv')
 
 if __name__ == '__main__':
-    height_df = pd.read_csv("Maya_Airdrop_Height_Ref.csv")
+    height_df = pd.read_csv("heights_ref.csv")
     df = pd.read_csv("RUNE Owner Airdrop - Day 1.csv")
 
     for height in height_df['MAYA BLOCK']:

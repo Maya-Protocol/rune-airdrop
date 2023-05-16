@@ -24,7 +24,7 @@ def get_rune_lp_tc(pool, address, height):
             return data
 
 
-height_df = pd.read_csv("Maya_Airdrop_Height_Ref.csv")
+height_df = pd.read_csv("heights_ref.csv")
 
 pools_response = requests.get(
     "https://midgard.ninerealms.com/v2/pools?status=available").json()

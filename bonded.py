@@ -122,7 +122,7 @@ def calculate_bonded(day, d1):
     return
 
 if __name__ == '__main__':
-    height_df = pd.read_csv("Maya_Airdrop_Height_Ref.csv")
+    height_df = pd.read_csv("heights_ref.csv")
     df = pd.read_csv("RUNE Owner Airdrop - Day 1.csv")
 
     for height in height_df['TC BLOCK']:
